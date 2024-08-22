@@ -111,11 +111,12 @@
     </div>
 </div>
 
-            <!-- Results Section (Optional) -->
-            <div class="results mx-auto w-3/4 mt-80">
+            <!-- Display famous -->
+            <div class="results mx-auto w-3/4 mt-80 ">
                 <h2 class="text-2xl font-bold mb-5">Available Rentals</h2>
+                
                 <!-- Available cards -->
-                <div class="available-cards flex space-x-2 flex-wrap gap-2 ">
+                <div class="ml-20 available-cards flex space-x-2 flex-wrap gap-2 ">
                     <div class="flex flex-wrap gap-2 pb-5">
                         <div class="w-[300px] h-[300px] rounded overflow-hidden shadow-lg">
                             <img class="w-full" src="https://example.com/path-to-house-image1.jpg" alt="Rental House 1">
@@ -215,7 +216,7 @@
                     </div>
     
                     <!-- Copyright -->
-                    <div class="text-center mt-6 text-gray-400 text-sm">
+                    <div class="text-center mt-6  text-gray-400 text-sm">
                         <p>&copy; 2024 Rentals.us. All rights reserved.</p>
                     </div>
                 </div>
@@ -259,19 +260,50 @@
                     resultsContainer.innerHTML = '<p>No rentals found for the given criteria.</p>';
                     return;
                 }
+                const maps=` <div class="googlemaps">
+                               <iframe class="w-[200px],h-[40px]"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30773346.661584042!2d61.03019197055083!3d19.690812551779832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1724334484130!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>`
         
                 houses.forEach(house => {
                     const houseCard = `
-                        <div class="w-[300px] h-[300px] rounded overflow-hidden shadow-lg">
-                            <img class="w-full" src="https://example.com/path-to-house-image.jpg" alt="${house.address}">
-                            <div class="px-6 py-4">
-                                <div class="font-bold text-xl mb-2">${house.address}</div>
-                                <p class="text-gray-700 text-base">City: ${house.city}</p>
-                                <p class="text-gray-700 text-base">Rent: $${house.rent} per month</p>
-                                <p class="text-gray-700 text-base">Rooms: ${house.rooms}</p>
-                                <p class="text-gray-700 text-base">Family Size: ${house.family_size}</p>
-                            </div>
-                        </div>
+                        <div class="pb-3 ">
+    <div class="border-4 hover:border-blue-900 w-[800px] h-[300px] rounded overflow-hidden shadow-lg flex space-x-3">
+        <div class="image m-2 rounded-lg">
+            <img class="rounded-lg w-[300px] h-[200px]" src="${house.img}" alt="${house.address}">
+        </div>
+        <div class="px-6 py-4 w-full flex flex-col justify-between">
+            <div>
+                <div class="font-bold text-xl mb-2">${house.address}</div>
+                <div class="flex space-x-10">
+                    <div>
+                        <p class="mb-2 text-gray-700 text-base">City: ${house.city}</p>
+                       
+                        <p class="text-gray-700 text-base">Rent: $${house.rent} per month</p>
+                    </div>
+
+                    <div>
+                        <p class="mb-2 text-gray-700 text-base">Rooms: ${house.rooms}</p>
+
+                        <p class="text-gray-700 text-base">Family Size: ${house.family_size}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex space-x-10 ">
+                <div>
+                <p class="text-gray-700 text-base">Adress: ${house.adress}</p>
+                </div>
+                <div c>
+                <p class="ml-[20px] text-gray-700 text-base">District: ${house.district}</p>
+                </div>
+
+            </div>
+            <div class="googlemaps mt-4 mb-2"> 
+                <iframe class="w-40 h-20 " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30773346.661584042!2d61.03019197055083!3d19.690812551779832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1724334484130!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
                     `;
                     resultsContainer.innerHTML += houseCard;
                 });
