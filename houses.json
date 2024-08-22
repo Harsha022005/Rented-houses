@@ -1,0 +1,46 @@
+[
+  {
+      "id": 1,
+      "district": "Central",
+      "city": "New York",
+      "address": "123 Main St",
+      "latitude": 40.7128,
+      "longitude": -74.0060,
+      "rent": 1500,
+      "rooms": 3,
+      "family_size": 4
+  },
+  {
+    "id": 4,
+    "district": "Central",
+    "city": "New York",
+    "address": "123 Main St",
+    "latitude": 40.7128,
+    "longitude": -74.0060,
+    "rent": 1200,
+    "rooms": 3,
+    "family_size": 4
+},
+  {
+      "id": 2,
+      "district": "Westside",
+      "city": "Los Angeles",
+      "address": "456 Elm St",
+      "latitude": 34.0522,
+      "longitude": -118.2437,
+      "rent": 1200,
+      "rooms": 2,
+      "family_size": 3
+  },
+  {
+      "id": 3,
+      "district": "Downtown",
+      "city": "Chicago",
+      "address": "789 Oak St",
+      "latitude": 41.8781,
+      "longitude": -87.6298,
+      "rent": 1800,
+      "rooms": 4,
+      "family_size": 5
+  }
+]
