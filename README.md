@@ -56,7 +56,7 @@ To run the project locally, follow these steps:
 5.  5.Open your browser and go to: http://localhost:3000
 
 
-🎯 How to Use
+🎯 How to Use : 
 Use the search filters to input your preferred location and family size.
 Browse the available houses based on your filters.
 Click on a house listing to see detailed information like price, description, and contact info.
